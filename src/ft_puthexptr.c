@@ -6,12 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 14:24:03 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/09 21:42:27 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/10 14:01:15 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "../ft_printf.h"
 
 int	ft_rechex(int len, unsigned long long ptr)
 {
@@ -23,9 +22,9 @@ int	ft_rechex(int len, unsigned long long ptr)
 		mod = ptr % 16 + 48;
 	if (ptr % 16 >= 10)
 		mod = ptr % 16 + 87;
-	ft_rechex(len, ptr / 16);
+	len = ft_rechex(len + 1, ptr / 16);
 	write(1, &mod, 1);
-	len++;
+	return (len);
 }
 
 int	ft_puthexptr(unsigned long long ptr)
@@ -36,7 +35,7 @@ int	ft_puthexptr(unsigned long long ptr)
 		return (0);
 	len = 2;
 	write(1, "0x", 2);
-	len += ft_rechex(len, ptr);
+	len = ft_rechex(len, ptr);
 	return (len);
 }
 

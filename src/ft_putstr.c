@@ -6,11 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 14:19:25 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/09 20:44:08 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/10 14:30:16 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "../ft_printf.h"
 
 int	ft_putstr(char *str)
 {
@@ -18,7 +18,10 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	while (str[i])
-		write(1, &str[i++], 1);
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 	return (i);
 }
 // This function prints a string to the standard output.

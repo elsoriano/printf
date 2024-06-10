@@ -2,33 +2,30 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = rcs
-NAME = libft.a
-SRCS = ft_bzero.c \
-			ft_strlen.c \
-
-
-SRCS_BONUS = ft_lstnew_bonus.c \
+NAME = ft_printf.a
+SRCS = 		src/ft_printf.c \
+			src/ft_putdigit.c \
+			src/ft_puthexnb.c \
+			src/ft_puthexptr.c \
+			src/ft_putstr.c \
+			src/ft_putchar.c \
 
 OBJS = ${SRCS:.c=.o}
-OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-%.o: %.c libft.h
+%.o: %.c ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-bonus: $(OBJS) $(OBJS_BONUS)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(OBJS_BONUS)
-
-.PHONY: clean fclean re bonus
+.PHONY: clean fclean re
