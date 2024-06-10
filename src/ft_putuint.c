@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putuint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/09 14:12:23 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 17:56:35 by rhernand         ###   ########.fr       */
+/*   Created: 2024/06/10 16:49:07 by rhernand          #+#    #+#             */
+/*   Updated: 2024/06/10 17:53:40 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../ft_printf.h"
+#include "../libft/libft.h"
 
-# include <stdarg.h>
-# include <unistd.h>
+static int	ft_uintoa(int len, unsigned int nbr)
+{
+	char	buff;
 
-int		ft_putstr(char *str);
-int		ft_puthexptr(unsigned long long ptr);
-int		ft_putdigit(int nbr);
-int		ft_putuint(unsigned int nbr);
-int		ft_puthexnb(char c, unsigned int nbr);
-int		ft_putdigit(int nbr);
-int		ft_printf(const char *str, ...);
-int		ft_putchar(int c);
-int		ft_recitoa(int len, int nbr);
+	if (nbr < 1)
+		return (len);
+	buff = nbr % 10 + 48;
+	len = ft_uintoa(len + 1, nbr / 10);
+	write(1, &buff, 1);
+	return (len);
+}
 
-#endif
+int	ft_putuint(unsigned int nbr)
+{
+	int				len;
+
+	len = 0;
+	len = ft_uintoa(len, nbr);
+	return (len);
+}

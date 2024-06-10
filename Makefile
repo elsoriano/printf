@@ -9,6 +9,7 @@ SRCS = 		src/ft_printf.c \
 			src/ft_puthexptr.c \
 			src/ft_putstr.c \
 			src/ft_putchar.c \
+			src/ft_putuint.c \
 
 OBJS = ${SRCS:.c=.o}
 

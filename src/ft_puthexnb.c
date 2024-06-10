@@ -6,15 +6,14 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 21:29:50 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 15:05:34 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/10 17:58:05 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 #include "../libft/libft.h"
-// #include <unistd.h>
 
-int	ft_bswitch(int len, char *base, int nb)
+int	ft_bswitch(int len, char *base, unsigned int nb)
 {
 	int	buff;
 
@@ -26,7 +25,7 @@ int	ft_bswitch(int len, char *base, int nb)
 	return (len);
 }
 
-int	ft_puthexnb(char c, int nb)
+int	ft_puthexnb(char c, unsigned int nb)
 {
 	int		len;
 	char	*base;
@@ -40,10 +39,3 @@ int	ft_puthexnb(char c, int nb)
 	free(base);
 	return (len);
 }
-
-/* int	main(void)
-{
-	printf("print nb hex %X\n", 12345678);
-	ft_puthexnb('x', 12345678);
-	return (0);
-} */

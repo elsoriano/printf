@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:08:19 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 14:53:20 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/10 19:01:09 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	ft_printargs(const char c, va_list ap)
 		len += ft_puthexptr(va_arg(ap, unsigned long long));
 	else if (c == 'd' || c == 'i')
 		len += ft_putdigit(va_arg(ap, int));
-/* 	else if (c == 'u')
-		len += ft_putuint(va_arg(ap, unsigned int)); */
+	else if (c == 'u')
+		len += ft_putuint(va_arg(ap, unsigned int));
 	else if (c == 'X' || c == 'x')
-		len += ft_puthexnb(c, va_arg(ap, int));
+		len += ft_puthexnb(c, va_arg(ap, unsigned int));
 	else if (c == '%')
 	{
 		write(1, "%", 1);
@@ -57,9 +57,7 @@ int	ft_printf(const char *str, ...)
 			len++;
 		}
 		else if (*(buff + 1))
-		{
 			len = len + ft_printargs(*(buff++ + 1), ap);
-		}
 		if (*buff)
 			buff++;
 	}
