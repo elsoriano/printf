@@ -6,11 +6,10 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 17:08:19 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 19:01:09 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:01:44 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
 #include "../ft_printf.h"
 
 int	ft_printargs(const char c, va_list ap)

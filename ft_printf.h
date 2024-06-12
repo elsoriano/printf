@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 14:12:23 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 17:56:35 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:08:11 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 int		ft_putstr(char *str);
 int		ft_puthexptr(unsigned long long ptr);
@@ -25,5 +26,7 @@ int		ft_putdigit(int nbr);
 int		ft_printf(const char *str, ...);
 int		ft_putchar(int c);
 int		ft_recitoa(int len, int nbr);
+int		ft_strlen(const char *s);
+char	*ft_strdup(const char *s1);
 
 #endif

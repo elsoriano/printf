@@ -6,7 +6,7 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 14:24:03 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 14:01:15 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:49:43 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ int	ft_puthexptr(unsigned long long ptr)
 	int	len;
 
 	if (!ptr)
-		return (0);
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
 	len = 2;
 	write(1, "0x", 2);
 	len = ft_rechex(len, ptr);

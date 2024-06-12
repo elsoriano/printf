@@ -6,12 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:49:07 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 17:53:40 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:35:12 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-#include "../libft/libft.h"
 
 static int	ft_uintoa(int len, unsigned int nbr)
 {
@@ -30,6 +29,11 @@ int	ft_putuint(unsigned int nbr)
 	int				len;
 
 	len = 0;
+	if (nbr == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 	len = ft_uintoa(len, nbr);
 	return (len);
 }

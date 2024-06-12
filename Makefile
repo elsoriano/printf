@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = rcs
-NAME = ft_printf.a
+NAME = libftprintf.a
 SRCS = 		src/ft_printf.c \
 			src/ft_putdigit.c \
 			src/ft_puthexnb.c \
@@ -10,6 +10,8 @@ SRCS = 		src/ft_printf.c \
 			src/ft_putstr.c \
 			src/ft_putchar.c \
 			src/ft_putuint.c \
+			src/ft_strlen.c \
+			src/ft_strdup.c \
 
 OBJS = ${SRCS:.c=.o}
 

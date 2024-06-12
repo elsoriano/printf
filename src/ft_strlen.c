@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/09 14:19:25 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/12 13:26:04 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/10 19:44:14 by rhernand          #+#    #+#             */
+/*   Updated: 2024/06/12 13:00:03 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
-
-int	ft_putstr(char *str)
+int	ft_strlen(const char *s)
 {
-	int	i;
+	int	j;
 
-	if (!str)
+	j = 0;
+	while (s[j] != '\0')
 	{
-		write(1, "(null)", 6);
-		return (6);
+		j++;
 	}
-	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
+	return (j);
 }
-// This function prints a string to the standard output.
+
+/*int	main(void)
+{
+	printf("ft_strlen %lu\n", ft_strlen("hola"));
+}*/

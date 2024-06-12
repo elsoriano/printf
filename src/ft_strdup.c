@@ -1,32 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/09 14:19:25 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/12 13:26:04 by rhernand         ###   ########.fr       */
+/*   Created: 2024/04/20 20:46:00 by rhernand          #+#    #+#             */
+/*   Updated: 2024/06/12 12:59:59 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* #include <stdio.h>
+#include <string.h> */
+
 #include "../ft_printf.h"
 
-int	ft_putstr(char *str)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
+	char	*s2;
+	int		len;
+	int		i;
 
-	if (!str)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
 	i = 0;
-	while (str[i])
+	len = ft_strlen(s1) + 1;
+	s2 = (char *) malloc((len) * sizeof(char));
+	if (s2 == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		write(1, &str[i], 1);
+		s2[i] = s1[i];
 		i++;
 	}
-	return (i);
+	return (s2);
 }
-// This function prints a string to the standard output.
+
+/* int	main(void)
+{
+	const char	str[] = "Hello World";
+
+	printf("strdup result = %s\n", strdup(str));
+	printf("ft_strdup result = %s\n", ft_strdup(str));
+	return (0);
+} */

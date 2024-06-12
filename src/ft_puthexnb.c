@@ -6,12 +6,12 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 21:29:50 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 17:58:05 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:37:04 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-#include "../libft/libft.h"
+#include <stdlib.h>
 
 int	ft_bswitch(int len, char *base, unsigned int nb)
 {
@@ -30,6 +30,11 @@ int	ft_puthexnb(char c, unsigned int nb)
 	int		len;
 	char	*base;
 
+	if (nb == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 	if (c == 'X')
 		base = ft_strdup("0123456789ABCDEF");
 	else
