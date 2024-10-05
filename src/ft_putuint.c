@@ -6,11 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:49:07 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/12 13:35:12 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:41:15 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../inc/ft_printf.h"
 
 static int	ft_uintoa(int len, unsigned int nbr)
 {

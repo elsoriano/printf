@@ -6,11 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 14:24:03 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/12 13:49:43 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:41:04 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../inc/ft_printf.h"
 
 int	ft_rechex(int len, unsigned long long ptr)
 {

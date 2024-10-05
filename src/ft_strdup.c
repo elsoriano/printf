@@ -6,14 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 20:46:00 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/12 12:59:59 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:41:29 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
-#include <string.h> */
-
-#include "../ft_printf.h"
+#include "../inc/ft_printf.h"
 
 char	*ft_strdup(const char *s1)
 {

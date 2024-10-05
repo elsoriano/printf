@@ -6,11 +6,11 @@
 /*   By: rhernand <rhernand@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 12:49:10 by rhernand          #+#    #+#             */
-/*   Updated: 2024/06/10 12:57:23 by rhernand         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:40:41 by rhernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../inc/ft_printf.h"
 
 int	ft_putchar(int c)
 {
